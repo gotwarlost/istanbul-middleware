@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Authors</title>
+    <script src='/vendor/jquery.js'></script>
+</head>
+<body>
+
+<h1>Authors</h1>
+
+<ul class='items'>
+    {{#each authors}}
+        <li class='item' id='{{id}}'>{{name}}</li>
+    {{/each}}
+</ul>
+<script src='/js/client.js'></script>
+</body>
+</html>

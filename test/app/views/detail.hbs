@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Authors</title>
+    <script src='/vendor/jquery.js'></script>
+</head>
+<body>
+
+<p>
+    <a href='/'>Back to list</a>
+</p>
+{{#with author}}
+<h1>Author: {{name}}</h1>
+
+<p>ID: {{id}}</p>
+<p>DOB: {{dob}}</p>
+<h2 id='deceased' style='display:none;'>Deceased</h2>
+
+<script src='/js/dead.js'></script>
+<script>
+    $(function () {
+        showDeceased({{deceased}});
+    });
+</script>
+{{/with}}
+
+</body>
+</html>
