@@ -1,6 +1,8 @@
 istanbul-middleware
 ===================
 
+[![Build Status](https://travis-ci.org/gotwarlost/istanbul-middleware.png?branch=master)](https://travis-ci.org/gotwarlost/istanbul-middleware) [![Dependency Status](https://gemnasium.com/gotwarlost/istanbul-middleware.png)](https://gemnasium.com/gotwarlost/istanbul-middleware)
+
 Connect middleware for getting code coverage numbers in functional tests for nodejs apps using istanbul.
 
 Run the sample app at `test/app` to get a feel for how this works.
