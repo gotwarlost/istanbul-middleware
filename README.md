@@ -183,6 +183,11 @@ function ignoreFrameworks(req) {
 For all other cases where the client handler provided by this library is not good enough, just write your own
 middleware as documented in the summary.
 
+### `istanbulMiddleware.getInstrumenter()`
+
+returns the instrumenter object that is created as a side-effect of the `hookLoader` call. Useful for custom
+client-side instrumentation to ensure that the instrumentation is done with the same options for all code.
+
 Third-party libraries
 ---------------------
 
