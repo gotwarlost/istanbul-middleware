@@ -42,7 +42,9 @@ module.exports = {
             app.use(coverage.createClientHandler(publicDir, { matcher: matcher }));
         }
 
-        app.use(bodyParser());
+        app.use(bodyParser.urlencoded({ extended: true }));
+        app.use(bodyParser.json());
+
         app.set('view engine', 'hbs');
         app.engine('hbs', require('hbs').__express);
         app.use(express['static'](publicDir));
