@@ -11,4 +11,3 @@ branches:
 
 script:
     - npm test --cover
-
