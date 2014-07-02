@@ -13,7 +13,8 @@
     },
     "dependencies":{
         "istanbul":"0.1.x",
-        "express":"3.x",
+        "express":"4.x",
+        "body-parser": "~1.4.3",
         "archiver": "0.4.x"
     },
     "devDependencies":{

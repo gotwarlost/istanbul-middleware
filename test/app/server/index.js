@@ -4,7 +4,8 @@ var path = require('path'),
     url = require('url'),
     data = require('./data'),
     publicDir = path.resolve(__dirname, '..', 'public'),
-    coverage = require('istanbul-middleware');
+    coverage = require('istanbul-middleware'),
+    bodyParser = require('body-parser');
 
 function matcher(req) {
     var parsed = url.parse(req.url);
@@ -41,11 +42,12 @@ module.exports = {
             app.use(coverage.createClientHandler(publicDir, { matcher: matcher }));
         }
 
-        app.use(express.bodyParser());
+        app.use(bodyParser.urlencoded({ extended: true }));
+        app.use(bodyParser.json());
+
         app.set('view engine', 'hbs');
         app.engine('hbs', require('hbs').__express);
         app.use(express['static'](publicDir));
-        app.use(app.router);
 
         app.get('/', list);
         app.get('/authors/:id', detail);
