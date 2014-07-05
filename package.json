@@ -12,7 +12,7 @@
         "test": "./test/run.sh"
     },
     "dependencies":{
-        "istanbul":"0.1.x",
+        "istanbul":"0.2.x",
         "express":"4.x",
         "body-parser": "~1.4.3",
         "archiver": "0.4.x"
