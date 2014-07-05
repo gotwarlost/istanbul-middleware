@@ -32,7 +32,7 @@ function setup(cb) {
 
 function runServer(cb) {
     serverProcess = run(appDir, 'node', [ 'index.js', '--coverage' ]);
-    cb();
+    setTimeout(cb, 2000); // let the server start up
 }
 
 function runPhantomTests(cb) {
