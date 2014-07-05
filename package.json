@@ -2,7 +2,7 @@
     "author":"Krishnan Anantheswaran <kananthmail-github@yahoo-inc.com>",
     "name":"istanbul-middleware",
     "description":"Connect middleware for Istanbul to handle server-side as well as browser coverage use-cases for node apps",
-    "version":"0.1.1",
+    "version":"0.2.0",
     "repository":{
         "type":"git",
         "url":"git@github.com:gotwarlost/istanbul-middleware.git"
@@ -11,11 +11,18 @@
         "pretest": "jshint --config ./node_modules/yui-lint/jshint.json lib/*js",
         "test": "./test/run.sh"
     },
+    "contributors": [
+        "@arboleya",
+        "@harking",
+        "@mikaturunen",
+        "@jelmertanen",
+        "@tkmunzwa"
+    ],
     "dependencies":{
         "istanbul":"0.2.x",
         "express":"4.x",
         "body-parser": "~1.4.3",
-        "archiver": "0.4.x"
+        "archiver": "0.10.x"
     },
     "devDependencies":{
         "mkdirp": "*",
