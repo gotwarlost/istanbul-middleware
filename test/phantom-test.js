@@ -29,6 +29,7 @@ tests.push(function () {
     console.log('TEST: check list page and report coverage');
     page.open(baseUrl + '/', function (status) {
         if (status !== 'success') {
+            console.log('Status is ' + status);
             console.log('Unable to load main page!');
             phantom.exit(1);
         }
