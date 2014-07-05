@@ -53,6 +53,7 @@ tests.push(function () {
     console.log('TEST: check author page and report coverage');
     page.open(baseUrl + '/authors/1', function (status) {
         if (status !== 'success') {
+            console.log('Status is ' + status);
             console.log('Unable to load author page!');
             phantom.exit(1);
         }
