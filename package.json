@@ -22,7 +22,7 @@
         "istanbul":"0.2.x",
         "express":"4.x",
         "body-parser": "~1.4.3",
-        "archiver": "0.10.x"
+        "archiver": "0.14.x"
     },
     "devDependencies":{
         "mkdirp": "*",
