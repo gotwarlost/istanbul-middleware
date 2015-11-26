@@ -17,7 +17,8 @@
         "@mikaturunen",
         "@jelmertanen",
         "@tkmunzwa",
-        "@mcollina"
+        "@mcollina",
+        "@lpinca"
     ],
     "dependencies":{
         "istanbul":"0.4.x",
