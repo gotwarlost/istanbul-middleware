@@ -1,42 +1,40 @@
 {
-    "author":"Krishnan Anantheswaran <kananthmail-github@yahoo-inc.com>",
-    "name":"istanbul-middleware",
-    "description":"Connect middleware for Istanbul to handle server-side as well as browser coverage use-cases for node apps",
-    "version":"0.2.1",
-    "repository":{
-        "type":"git",
-        "url":"git@github.com:gotwarlost/istanbul-middleware.git"
-    },
-    "scripts":{
-        "pretest": "jshint --config ./node_modules/yui-lint/jshint.json lib/*js",
-        "test": "./test/run.sh"
-    },
-    "contributors": [
-        "@arboleya",
-        "@harking",
-        "@mikaturunen",
-        "@jelmertanen",
-        "@tkmunzwa",
-        "@mcollina",
-        "@lpinca"
-    ],
-    "dependencies":{
-        "istanbul":"0.4.x",
-        "express":"4.x",
-        "body-parser": "~1.12.3",
-        "archiver": "0.14.x"
-    },
-    "devDependencies":{
-        "mkdirp": "*",
-        "rimraf": "*",
-        "jshint": "*",
-        "async": "*",
-        "yui-lint": "*"
-    },
-    "engines":{
-        "node":">=0.6.x"
-    },
-    "license": "BSD"
+  "author": "Krishnan Anantheswaran <kananthmail-github@yahoo-inc.com>",
+  "name": "istanbul-middleware",
+  "description": "Connect middleware for Istanbul to handle server-side as well as browser coverage use-cases for node apps",
+  "version": "0.2.2",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gotwarlost/istanbul-middleware.git"
+  },
+  "scripts": {
+    "pretest": "jshint --config ./node_modules/yui-lint/jshint.json lib/*js",
+    "test": "./test/run.sh"
+  },
+  "contributors": [
+    "@arboleya",
+    "@harking",
+    "@mikaturunen",
+    "@jelmertanen",
+    "@tkmunzwa",
+    "@mcollina",
+    "@lpinca"
+  ],
+  "dependencies": {
+    "istanbul": "0.4.x",
+    "express": "4.x",
+    "body-parser": "~1.12.3",
+    "archiver": "0.14.x"
+  },
+  "devDependencies": {
+    "mkdirp": "*",
+    "rimraf": "*",
+    "jshint": "*",
+    "async": "*",
+    "yui-lint": "*"
+  },
+  "engines": {
+    "node": ">=0.6.x"
+  },
+  "license": "BSD"
 }
-
-
