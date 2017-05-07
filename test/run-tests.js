@@ -7,6 +7,7 @@ var child_process = require('child_process'),
     mkdirp = require('mkdirp'),
     rimraf = require('rimraf'),
     async = require('async'),
+    request = require('request'),
     serverProcess,
     timeoutHandle;
 
@@ -23,7 +24,7 @@ function setup(cb) {
         mkdirp.sync(outputDir);
         timeoutHandle = setTimeout(function () {
             throw new Error('Tests timed out');
-        }, 30000);
+        }, 30000*2*2);
         cb();
     } catch (ex) {
         cb(ex);
@@ -42,6 +43,20 @@ function runPhantomTests(cb) {
         cb(new Error('Phantom tests exited with code: ' + exitCode));
         phantomProcess = null;
     });
+}
+
+function getJSON(cb) {
+  console.log('TEST: Getting json');
+  request.get('http://localhost:8888/coverage?fmt=json', function (error, response, body) {
+    if (error) {
+      return cb(new Error(error));
+    }
+    try {
+      cb(null, JSON.parse(body));
+    } catch(error) {
+      return cb(new Error(error));
+    }
+  });
 }
 
 function downloadZip(cb) {
@@ -66,9 +81,8 @@ function unzipList(cb) {
     });
 }
 
-async.series([ setup, runServer, runPhantomTests, downloadZip, clearAll, unzipList], function (err) {
+async.series([ setup, runServer, runPhantomTests, getJSON, downloadZip, clearAll, unzipList], function (err, responses) {
     if (err) { throw err; }
     console.log('All done');
     process.exit(0);
 });
-
