@@ -24,7 +24,7 @@ function setup(cb) {
         mkdirp.sync(outputDir);
         timeoutHandle = setTimeout(function () {
             throw new Error('Tests timed out');
-        }, 30000*2*2);
+        }, 30000);
         cb();
     } catch (ex) {
         cb(ex);
