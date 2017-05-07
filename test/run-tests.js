@@ -7,6 +7,7 @@ var child_process = require('child_process'),
     mkdirp = require('mkdirp'),
     rimraf = require('rimraf'),
     async = require('async'),
+    request = require('request'),
     serverProcess,
     timeoutHandle;
 
@@ -44,6 +45,20 @@ function runPhantomTests(cb) {
     });
 }
 
+function getJSON(cb) {
+  console.log('TEST: Getting json');
+  request.get('http://localhost:8888/coverage?fmt=json', function (error, response, body) {
+    if (error) {
+      return cb(new Error(error));
+    }
+    try {
+      cb(null, JSON.parse(body));
+    } catch(error) {
+      return cb(new Error(error));
+    }
+  });
+}
+
 function downloadZip(cb) {
     var curlProcess = run(thisDir, 'curl', [ '-o', path.resolve(outputDir, 'coverage.zip'), 'http://localhost:8888/coverage/download' ]);
     curlProcess.on('exit', function (exitCode) {
@@ -66,9 +81,8 @@ function unzipList(cb) {
     });
 }
 
-async.series([ setup, runServer, runPhantomTests, downloadZip, clearAll, unzipList], function (err) {
+async.series([ setup, runServer, runPhantomTests, getJSON, downloadZip, clearAll, unzipList], function (err, responses) {
     if (err) { throw err; }
     console.log('All done');
     process.exit(0);
 });
-

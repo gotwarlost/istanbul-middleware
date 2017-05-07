@@ -27,10 +27,11 @@
     "archiver": "0.14.x"
   },
   "devDependencies": {
-    "mkdirp": "*",
-    "rimraf": "*",
-    "jshint": "*",
     "async": "*",
+    "jshint": "*",
+    "mkdirp": "*",
+    "request": "^2.81.0",
+    "rimraf": "*",
     "yui-lint": "*"
   },
   "engines": {

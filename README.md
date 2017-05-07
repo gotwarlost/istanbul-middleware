@@ -77,6 +77,11 @@ The above snippet adds the following endpoints to your app under `/coverage`
         <td>Download a zip file with coverage JSON, HTML and lcov reports</td>
     </tr>
     <tr>
+        <td><code>GET&nbsp;/download?fmt=json</code></td>
+        <td>Download the raw coverage JSON</td>
+    </tr>
+    <tr>
+    <tr>
         <td><code>POST&nbsp;/client</code></td>
         <td>
             Allows you to post a coverage object for client-side code coverage from the browser.
@@ -197,4 +202,3 @@ The following third-party libraries are used by this module:
 
 * express: https://github.com/visionmedia/express -  to implement the middleware
 * archiver: https://github.com/ctalkington/node-archiver - for zip functionality
-
