@@ -21,7 +21,8 @@
     "@lpinca"
   ],
   "dependencies": {
-    "istanbul": "0.4.x",
+    "istanbul": "^0.4.5",
+    "istanbul-lib-instrument": "^1.10.1",
     "express": "4.x",
     "body-parser": "~1.12.3",
     "archiver": "0.14.x"
