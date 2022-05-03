@@ -200,5 +200,5 @@ Third-party libraries
 The following third-party libraries are used by this module:
 
 * express: https://github.com/visionmedia/express -  to implement the middleware
-* archiver: https://github.com/ctalkington/node-archiver - for zip functionality
+* jszip: https://www.npmjs.com/package/jszip - for zip functionality
 
