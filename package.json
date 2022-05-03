@@ -23,15 +23,15 @@
   "dependencies": {
     "istanbul": "0.4.x",
     "express": "4.x",
-    "body-parser": "~1.12.3"
+    "body-parser": "~1.12.3",
+    "jszip": "^3.9.1"
   },
   "devDependencies": {
     "mkdirp": "*",
     "rimraf": "*",
     "jshint": "*",
     "async": "*",
-    "yui-lint": "*",
-    "jszip": "^3.9.1"
+    "yui-lint": "*"
   },
   "engines": {
     "node": ">=0.6.x"
