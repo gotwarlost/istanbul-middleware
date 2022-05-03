@@ -73,8 +73,12 @@ The above snippet adds the following endpoints to your app under `/coverage`
         <td>Reset coverage to baseline numbers</td>
     </tr>
     <tr>
+        <td><code>GET&nbsp;/download_new</code></td>
+        <td>node >=16, Download a zip file with coverage JSON, HTML and lcov reports</td>
+    </tr>
+    <tr>
         <td><code>GET&nbsp;/download</code></td>
-        <td>Download a zip file with coverage JSON, HTML and lcov reports</td>
+        <td>below node 16, Download a zip file with coverage JSON, HTML and lcov reports</td>
     </tr>
     <tr>
         <td><code>POST&nbsp;/client</code></td>
